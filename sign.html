@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body, html {
+      height: 100%;
+    }
+    .form-signin {
+      max-width: 330px;
+      padding: 15px;
+      margin: auto;
+    }
+    .center-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+    .input-group-text {
+      cursor: pointer;
+    }
+   
+  </style>
+</head>
+<body>
+  <div class="center-container">
+    <main class="form-signin w-100 m-auto ">
+      <form >
+        <img class="mb-4" src="./FU LOGO 1.jpg" alt="" width="105px" style="margin-left:100px">
+        <h1 class="h3 mb-3 fw-normal text-center">Log In</h1>
+
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+          <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating mb-3 input-group">
+          <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+          <span class="input-group-text" id="togglePassword"><i class="fas fa-eye"></i></span>
+          <label for="floatingPassword">Password</label>
+        </div>
+
+        <div class="form-check text-start my-3 d-flex align-items-center justify-content-between">
+          <div>
+          <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault" style="margin-bottom: 4px;">
+          <label class="form-check-label" for="flexCheckDefault">
+            Remember me
+          </label>
+        </div>
+          <a href="#" class="forgot-password text-decoration-none">Forgot password?</a>
+        </div>
+        
+      
+        
+        <button class="btn btn-primary w-100 py-2" type="submit">Log in</button>
+        <p class="mt-5 mb-3 text-body-secondary text-center">© Farwestern University – 2024</p>
+      </form>
+   
+    </main>
+     
+  </div>
+ </div>
+  <script>
+    const togglePassword = document.querySelector('#togglePassword');
+    const password = document.querySelector('#floatingPassword');
+
+    togglePassword.addEventListener('click', function () {
+      // Toggle the type attribute
+      const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+      password.setAttribute('type', type);
+      // Toggle the eye slash icon
+      this.querySelector('i').classList.toggle('fa-eye');
+      this.querySelector('i').classList.toggle('fa-eye-slash');
+    });
+  </script>
+</body>
+</html>
